@@ -1,0 +1,277 @@
+/* Varlia logo font: font-family: 'Fondamento', cursive; */
+
+body {
+  padding-top: 70px;
+  padding-bottom: 20px;
+  background: black;
+  color: white;
+}
+
+a {
+    color: lightblue;
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+header#mainpage {
+	text-align: center;
+	background: pink;
+	margin-top: 20px;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+
+h1#title-text {
+    font-family: "Fondamento", cursive;
+    font-size: 61px;
+    color: black;
+}
+
+p#header-content {
+    padding: 5px;
+    color: black;
+}
+
+h3#header-greeting {
+    color: black;
+}
+
+section#courses {
+	background: #46e260;
+	border: 1em solid green;
+	padding: 0 10px 0 10px;
+}
+
+.buttonless_list {
+	list-style-type: none;
+}
+
+footer {
+    text-align: center;
+    color: white;
+}
+
+footer > div:first-of-type {
+    border-top: .5em solid gray;
+    margin-top: 2em;
+    line-height: 2em;
+    padding-top: 1em;
+}
+
+footer > div:first-of-type > a {
+    margin: 0 1em 0 0;
+}
+
+footer > div:first-of-type > a:last-of-type {
+    margin: 0;
+}
+
+.navbar-inverse .navbar-text {
+  color: #edeeef;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #edeeef;
+}
+
+.navbar-inverse {
+  background-color: #711c87;
+}
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+  color: #edeeef;
+  background-color: #711c87;
+}
+
+.dropdown-header {
+  padding: 3px 10px;
+}
+
+.t2-menu {
+    padding-left: 15px !important;
+    text-decoration: none !important;
+}
+
+.t2-menu:hover,
+.t2-menu:focus {
+    background: #efeFef;
+}
+
+.navbar-header-CourtOfLight,
+.navbar-header-CourtOfLight > b > a {
+  background: yellow;
+  color: black;
+}
+
+.navbar-header-CourtOfDarkness,
+.navbar-header-CourtOfDarkness > b > a {
+  color: white;
+  background: black;
+}
+
+.navbar-header-Forsaken,
+.navbar-header-Forsaken > b > a {
+    color: white;
+    background: brown;
+}
+
+.navbar-header-OtherEntities,
+.navbar-header-OtherEntities > b > a {
+    color: white;
+    background: gray;
+}
+
+.navbar-header-Devils,
+.navbar-header-Devils > b > a {
+    color: white;
+    background: red;
+}
+
+.navbar-header-Demons,
+.navbar-header-Demons > b > a {
+    color: black;
+    background: orange;
+}
+
+.navbar-header-anios,
+.navbar-header-anios > b > a {
+    color: white;
+    background: darkred;
+}
+
+.navbar-header-domhan,
+.navbar-header-domhan > b > a {
+    color: white;
+    background: darkgreen;
+}
+
+.navbar-header-neamh,
+.navbar-header-neamh > b > a {
+    color: black;
+    background: yellow;
+}
+
+.navbar-header-otherregion,
+.navbar-header-otherregion > b > a {
+    color: white;
+    background: black;
+}
+
+.navbar-header-monsterType,
+.navbar-header-monsterType > b > a {
+    color: white;
+    background: purple;
+}
+
+.courses-dropdown-header {
+  display: block;
+  padding: 3px 20px;
+  font-size: 12px;
+  line-height: 1.42857143;
+  color: white;
+  background: darkblue;
+  white-space: nowrap;
+}
+
+.news-header {
+    background: #711c87;
+    color: white;
+    padding: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.news-header > span:first-of-type  {
+    font-size: 26px;
+}
+
+.news-header > span:last-of-type {
+    float: right;
+}
+
+.news-header > span:last-of-type > a {
+    color: lightblue;
+}
+
+.news-block {
+    border: 5px solid #711c87;
+    background: black;
+    color: white;
+    height: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.news-block > div {
+    height: 175px;
+    border-right: 5px solid #711c87;
+}
+
+.news-block > div > h4 > a {
+    color: lightblue;
+}
+
+.news-block > div > div {
+    display: inline-block;
+    max-width: 100%;
+    height: 60%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+input,
+textarea,
+select,
+option {
+    color: black;
+}
+
+main#god-stats {
+    float: left;
+}
+
+img#symbol {
+    float: right;
+}
+
+.monsterDivider {
+    width: 100%;
+    height: 5px;
+    background: red;
+    background: -webkit-linear=gradient(left, red, pink);
+    background: -o-linear-gradient(right, red, pink);
+    background: -moz-linear-gradient(right, red, pink);
+    background: linear-gradient(to right, red, pink);
+    display: block;
+}
+
+.monsterUnderline {
+    width: 100%;
+    height: 2px;
+    background: red;
+    display: block;
+}
+
+.statBlock {
+    text-align: center;
+}
+
+.selection-text {
+    padding-right: 0;
+}
+
+.map-modal {
+    color: black;
+    text-align: center;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+    .map-modal {
+        width: 1030px;
+    }
+}
