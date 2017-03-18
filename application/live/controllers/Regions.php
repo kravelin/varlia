@@ -9,6 +9,7 @@ class Regions extends CI_Controller {
         $this->load->model('locations_model');
         $this->load->helper('url_helper');
         $this->load->helper('make_navbar_helper');
+        $this->load->helper('maps_helper');
     }
 
     public function index()
@@ -34,6 +35,7 @@ class Regions extends CI_Controller {
         $data['title'] = "View Region";
         $data['realms'] = $this->realms_model->get_realms_by_region($data['name']);
         $data['locations'] = $this->locations_model->get_locations();
+        $data['maps'] = get_formatted_maps_list('region', $data['region']['id']);
 
         $this->load->view('templates/header', $data);
         $this->load->view('regions/summary', $data);

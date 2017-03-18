@@ -9,6 +9,7 @@ class Realms extends CI_Controller {
         $this->load->model('locations_model');
         $this->load->helper('url_helper');
         $this->load->helper('make_navbar_helper');
+        $this->load->helper('maps_helper');
     }
 
     public function index()
@@ -34,6 +35,7 @@ class Realms extends CI_Controller {
         $data['name'] = $data['realm']['name'];
         $data['region'] = $this->regions_model->get_region_by_name($data['realm']['region']);
         $data['locations'] = $this->locations_model->get_locations_by_realm($data['name']);
+        $data['maps'] = get_formatted_maps_list('realm', $data['realm']['id']);
 
         $this->load->view('templates/header', $data);
         $this->load->view('realms/summary', $data);

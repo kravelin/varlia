@@ -2,13 +2,14 @@
 
 if (!function_exists('get_maps_list'))
 {
-    function get_maps_list()
+    function get_maps_list($area = NULL, $id = NULL)
     {
         $CI =& get_instance();
         $CI->load->model('maps_model');
 
         $imageDir = '/www/images/maps';
-        $maps = $CI->maps_model->get_maps();
+
+        $maps = $CI->maps_model->get_maps($area, $id);
 
         $list = [];
 
@@ -26,11 +27,26 @@ if (!function_exists('get_maps_list'))
 
 if (!function_exists('get_formatted_maps_list'))
 {
-    function get_formatted_maps_list()
+    function get_formatted_maps_list($area = NULL, $id = NULL)
     {
-        $mapList = get_maps_list();
+        $mapList = get_maps_list($area, $id);
 
-        $output = '<ul class="buttonless-list">';
+        if (empty($mapList))
+        {
+            return NULL;
+        }
+
+        $output = '';
+
+        switch ($area)
+        {
+            case 'realm':
+            case 'region':
+            case 'location':
+                $output .= '<h3>Maps for this ' . $area . '</h3>';
+        }
+
+        $output .= '<ul class="buttonless-list">';
 
         # create the list of maps showing name - width x height - description in a buttonless list
         foreach ($mapList as $map)

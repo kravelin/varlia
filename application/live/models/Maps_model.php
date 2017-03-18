@@ -6,15 +6,23 @@ class Maps_model extends CI_Model {
         $this->load->database();
     }
 
-    public function get_maps($filename = FALSE)
+    public function get_maps($area = NULL, $id = NULL)
     {
-        if ($filename === FALSE)
+        switch ($area)
         {
-            $query = $this->db->get('maps');
-            return $query->result_array();
+            case 'realm':
+                $this->db->where(array('realm_id' => $id));
+                break;
+            case 'region':
+                $this->db->where(array('region_id' => $id));
+                break;
+            case 'location':
+                $this->db->where(array('location_id' => $id));
+                break;
         }
 
-        $query = $this->db->get_where('maps', array('filename' => $filename));
-        return $query->row_array();
+        $this->db->order_by('name');
+        $query = $this->db->get('maps');
+        return $query->result_array();
     }
 }

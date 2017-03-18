@@ -9,4 +9,11 @@
     <div class="location-lore">
         <p><?php echo $location['lore'] ?></p>
     </div>
+
+    <div class="location-maps">
+<?php if (!empty($maps)): ?>
+    <?php echo $maps ?>
+<?php endif; ?>
+    </div>
+
 </div>

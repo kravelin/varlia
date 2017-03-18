@@ -7,12 +7,20 @@
         <p><?php echo $realm['lore'] ?></p>
     </div>
 
+    <div class="realm-locations">
 <?php if (!empty($locations)): ?>
-    <h3>Notable locations in <?php echo $realm['name'] ?></h3>
-    <ul>
+        <h3>Notable locations in <?php echo $realm['name'] ?></h3>
+        <ul>
     <?php foreach ($locations as $location): ?>
-        <li><a href="<?php echo site_url('locations/view/' . $location['slug']) . '">' . $location['name'] ?></a></li>
+            <li><a href="<?php echo site_url('locations/view/' . $location['slug']) . '">' . $location['name'] ?></a></li>
     <?php endforeach; ?>
-    </ul>
+        </ul>
 <?php endif; ?>
+    </div>
+
+    <div class="realm-maps">
+<?php if (!empty($maps)): ?>
+    <?php echo $maps ?>
+<?php endif; ?>
+    </div>
 </div>
