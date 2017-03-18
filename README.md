@@ -1,4 +1,5 @@
-# varlia
+# [![Varlia](images/logo.svg)](http://varlia.online)
+
 
 Varlia.online runs on CodeIgniter. Included in this repository is the relevant modified CodeIgniter configuration files as well as the pages written by me for the site.
 
